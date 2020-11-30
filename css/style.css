@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+}
+
+h1 {
+  /*color: #232d8b;*/
+  color: #ff7e00;
+  font-size: 30pt;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #ff7e00;
+  font-size: 24pt;
+  font-weight: bold;
+}
+
+p {
+  color: #232d8b;
+  font-size: 11pt;
+}
+
+a:link {
+  color: #ff7e00;
+}
+
+a:visited {
+  color: #ff7e00;
+}
+
+.header {
+  position: relative;
+  height: 50px;
+  width: 66%;
+  background-color: #232d8b;
+  margin-bottom: 30px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 29px) 100%, 200px 100%, 200px 150%, 0 150%);
+}
+
+.header nav {
+  position: absolute;
+  top: 0;
+  left: 150px;
+}
+
+.header nav div {
+  position: relative;
+  /*width: 150px;*/
+  height: 50px;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 0 40px;
+}
+
+.header nav div:hover {
+  text-decoration: underline;
+}
+/*
+.header-trekant {
+  position: absolute;
+  right: -29px;
+  top: 0;
+  width: 39px;
+  height: 50px;
+  background-color: #232d8b;
+  -webkit-clip-path: polygon(0 0, 100% 0, 10px 100%, 0 0);
+  clip-path: polygon(0 0, 100% 0, 10px 100%, 0 0);
+  overflow: hidden;
+}*/
+
+main {
+  display: grid;
+  grid-template-columns: 66% 34%;
+  grid-template-areas: "content news";
+  min-height: calc(100vh - 160px);
+}
+
+main section {
+  grid-area: content;
+  box-sizing: border-box;
+  padding-left: 100px;
+  padding-right: 29px;
+  float: left;
+}
+
+.forside-billede {
+  float: right;
+  width: 250px;
+  height: 250px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.sikkerhedsinfo, .kurser, .kontakt {
+  display: none;
+}
+
+.newsfeed {
+  position: relative;
+  grid-area: news;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.newsfeed::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 90%;
+  width: 3px;
+  background-color: #232d8b;
+  opacity: 0.5;
+  top: 5%;
+  border-radius: 3px;
+}
+
+.newsfeed ul {
+  padding-left: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.newsfeed li {
+  color: #232d8b;
+  font-size: 11pt;
+  margin-top: 20px;
+}
+
+.logo-box {
+  position: relative;
+  height: 60px;
+}
+
+.logo-img {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  height: 45px;
+}
+
+.button {
+  position: relative;
+  background-color: #ff7e00;
+  color: white;
+  overflow: hidden;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Ubuntu";
+  font-size: 30pt;
+  font-style: italic;
+  font-kerning: none;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 20px 0 20px -29px;
+  clip-path: polygon(29px 0, 100% 0, 171px 100%, 0 100%);
+  box-shadow: 0 -3px 0 0 #b45900 inset;
+}
+
+
+.button::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: -5px;
+  background-color: #b45900;
+  height: 60px;
+  width: 3px;
+  transform: rotate(30deg);
+  z-index: -1;
+}
+
+.button:hover {
+  filter: brightness(120%);
+}
+
+footer {
+  position: relative;
+  background-color: #232d8b;
+  right: 0;
+  bottom: 0;
+  width: 66%;
+  height: 50px;
+  float: right;
+  margin-top: 30px;
+  clip-path: polygon(29px 0, 100% 0, 100% 100%, 0 100%)
+}
+/*
+.footer-trekant {
+  position: absolute;
+  left: -29px;
+  top: 0;
+  width: 39px;
+  height: 50px;
+  background-color: #232d8b;
+  -webkit-clip-path: polygon(29px 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(29px 0, 100% 0, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+*/

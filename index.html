@@ -6,32 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/usec_favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
   <title>uSec</title>
 </head>
 <body>
   <header class="header">
     <div class="logo-box">
       <img src="images/logo_box.png" class="logo-bg">
-      <img src="images/usec_logo.png" alt="uSec logo" class="logo-img">
+      <img src="images/usec_logo.png" alt="uSec logo" class="logo-img" onclick="document.querySelector('.nav-forside').click()">
     </div>
     <nav>
-      <div class="nav-forside">
+      <div class="nav-forside active-tab" onclick="buttonClick('#forside', this)">
         Forside
       </div>
-      <div class="nav-sikkerhed">
+      <div class="nav-sikkerhed" onclick="buttonClick('#sikkerhedsinfo', this)">
         Sikkerhedsinfo
       </div>
-      <div class="nav-kurser">
+      <div class="nav-kurser" onclick="buttonClick('#kurser', this)">
         Kurser
       </div>
-      <div class="nav-kontakt">
+      <div class="nav-kontakt" onclick="buttonClick('#kontakt', this)">
         Kontakt
       </div>
     </nav>
   </header>
   <main>
-    <section class="forside">
-      <h1>OVERSKRIFT</h1>
+    <section id="forside">
+      <h1>Velkommen til uSec</h1>
       <img src="images/placeholder.png" alt="" class="forside-billede">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing
 elit. <a href="#">Mauris luctus ante et libero</a> accumsan, eget
@@ -43,7 +45,7 @@ mi, a faucibus lectus ultricies cursus. Cras convallis
 elementum mauris sed pellentesque. Duis id diam
 erat. Proin metus arcu, vehicula id blandit a,
 facilisis ac justo.</p>
-<br><br>
+<br>
 <p>Vestibulum massa sem, ultricies sed dapibus sit amet, molestie ut urna. Integer dignissim
 massa eget mattis tristique. Integer fringilla purus a justo pellentesque, <a href="#">id feugiat orci
 tincidunt</a>. Aliquam non felis et massa vehicula aliquam. Donec sed quam imperdiet leo
@@ -56,16 +58,16 @@ volutpat eros non, imperdiet turpis. Nam ac est sit amet mi tristique cursus.</p
       </div>
     </section>
 
-    <section class="sikkerhedsinfo">
-
+    <section id="sikkerhedsinfo">
+      sikkerhedsinfo
     </section>
 
-    <section class="kurser">
-
+    <section id="kurser">
+kurser
     </section>
 
-    <section class="kontakt">
-
+    <section id="kontakt">
+kontakt
     </section>
 
     <aside class="newsfeed">
@@ -81,5 +83,7 @@ volutpat eros non, imperdiet turpis. Nam ac est sit amet mi tristique cursus.</p
   <footer>
 
   </footer>
+
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

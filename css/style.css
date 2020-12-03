@@ -3,6 +3,10 @@
   font-family: 'Nunito', sans-serif;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 h1 {
   /*color: #232d8b;*/
   color: #ff7e00;
@@ -14,6 +18,12 @@ h1 {
 h2 {
   color: #ff7e00;
   font-size: 24pt;
+  font-weight: bold;
+}
+
+h3 {
+  color: #ff7e00;
+  font-size: 18pt;
   font-weight: bold;
 }
 
@@ -31,12 +41,14 @@ a:visited {
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 50px;
   width: 66vw;
   background-color: #232d8b;
   margin-bottom: 30px;
   clip-path: polygon(0 0, 100% 0, calc(100% - 29px) 100%, 200px 100%, 200px 150%, 0 150%);
+  z-index: 10;
 }
 
 .header nav {
@@ -113,23 +125,28 @@ main section {
 }
 
 .newsfeed {
-  position: relative;
-  grid-area: news;
+  position: fixed;
+  /*grid-area: news;*/
+  width: 34vw;
+  right: 0;
+  top: 0;
   float: left;
   box-sizing: border-box;
+  margin-top: 80px;
   padding-left: 30px;
   padding-right: 30px;
+  height: calc(100% - 130px);
 }
 
 .newsfeed::before {
   content: "";
   position: absolute;
   left: 0;
-  height: 90%;
+  height: calc(100% - 40px);
   width: 3px;
   background-color: #232d8b;
   opacity: 0.5;
-  top: 5%;
+  top: 20px;
   border-radius: 3px;
 }
 
@@ -182,6 +199,52 @@ main section {
   filter: brightness(120%);
 }
 
+#kurser .kursuskasse, .koronakasse {
+  position: relative;
+  color: #232d8b;
+  /*background-color: #efefef;*/
+  padding: 10px 30px;
+  border: 1px solid #232d8b;
+}
+
+.kursuskasse p {
+  width: calc(100% - 75px);
+}
+
+.koronakasse {
+  background-color: white;
+  box-sizing: border-box;
+  border: 2px solid #ff7e00;
+}
+
+.kursusknap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25px;
+  line-height: 25px;
+  color: white;
+  text-decoration: underline;
+  background-color: #ff7e00;
+  padding: 0 25px;
+  margin: 10px;
+  clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%);
+  cursor: pointer;
+}
+
+.kursusknap:hover {
+  filter: brightness(120%);
+}
+
+#kontakt form * {
+  display: block;
+  color: #232d8b;
+}
+
+#kontakt form textarea {
+  width: calc(100% - 20px);
+}
+
 footer {
   position: relative;
   background-color: #232d8b;
@@ -192,4 +255,27 @@ footer {
   float: right;
   margin-top: 30px;
   clip-path: polygon(29px 0, 100% 0, 100% 100%, 0 100%)
+}
+
+footer p {
+  color: white;
+  text-align: right;
+  line-height: 50px;
+  box-sizing: border-box;
+  padding-right: 20px;
+  white-space: pre;
+}
+
+footer i {
+  color: white;
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.fa-envelope {
+  font-size: 30px;
+}
+
+.fa-twitter-square, .fa-facebook-square {
+  font-size: 28px;
 }

@@ -69,6 +69,20 @@ a:visited {
   padding: 0 40px;
 }
 
+.header nav div::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 40px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: white;
+  opacity: 0.3;
+  transform: translateX(-50%) translateY(-50%) rotate(30deg);
+  z-index: 2;
+}
+
 .header nav div:hover {
   text-decoration: underline;
   text-decoration-color: rgba(255, 255, 255, 0.3);

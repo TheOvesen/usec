@@ -104,7 +104,7 @@ main section {
   grid-area: content;
   box-sizing: border-box;
   padding-left: 100px;
-  padding-right: 29px;
+  padding-right: 45px;
   float: left;
 }
 
@@ -169,13 +169,6 @@ main section {
   overflow: hidden;
   height: 50px;
   width: 200px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 30pt;
-  font-style: italic;
-  font-kerning: none;
-  font-weight: bolder;
-  text-decoration: underline;
   cursor: pointer;
   margin: 20px 0 20px -29px;
   clip-path: polygon(29px 0, 100% 0, 171px 100%, 0 100%);
@@ -197,6 +190,22 @@ main section {
 
 .button:hover {
   filter: brightness(120%);
+}
+
+.button p {
+  position: absolute;
+  display: block;
+  color: white;
+  font-size: 24pt;
+  text-align: center;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-kerning: none;
+  font-style: italic;
+  top: calc(50% - 1px);
+  left: calc(50% - 3px);
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
 }
 
 #kurser .kursuskasse, .koronakasse {
@@ -234,6 +243,33 @@ main section {
 
 .kursusknap:hover {
   filter: brightness(120%);
+}
+
+.citat {
+  font-size: 13pt;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.statistikker {
+  color: #232d8b;
+}
+
+.statistikker h3 {
+  margin-bottom: 15px;
+}
+
+.statistikker ul {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+  float: left;
+}
+
+.statistikker li {
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 #kontakt form * {

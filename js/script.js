@@ -21,6 +21,7 @@ function showPage(pageID) {
     target = document.querySelector("#forside");
   }
 
+  window.scrollTo(0, 0);
   showElement(target);
 }
 
@@ -43,3 +44,20 @@ function validID(pageID) {
 
   return bool;
 }
+
+function appendNews(newsList) {
+  for (let news of newsList) {
+    let newElement = document.createElement("li");
+    newElement.innerHTML = `<a href='${news.link}'>${news.title}</a>`;
+
+    document.querySelector(".newsfeed ul").appendChild(newElement);
+  }
+}
+
+fetch('json/news.json')
+.then(function(response) {
+  return response.json();
+})
+.then(json => {
+  appendNews(json.news)
+});

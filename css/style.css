@@ -41,7 +41,7 @@ a:visited {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   height: 50px;
   width: 66vw;
@@ -96,6 +96,7 @@ a:visited {
 .logo-box {
   position: relative;
   height: 60px;
+  width: 150px;
   cursor: pointer;
 }
 
@@ -112,6 +113,7 @@ main {
   grid-template-areas: "content news";
   min-height: calc(100vh - 160px);
   overflow-x: hidden;
+  margin-top: 80px;
 }
 
 main section {
@@ -132,8 +134,8 @@ main section {
 
 .forside-billede {
   float: right;
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  /*height: 250px;*/
   margin-left: 30px;
   margin-bottom: 30px;
 }
@@ -172,8 +174,17 @@ main section {
 
 .newsfeed li {
   color: #232d8b;
-  font-size: 12pt;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.newsfeed li a:link {
+  color: #232d8b;
+  font-size: 14pt;
+  text-decoration-color: rgba(35, 45, 139, 0.4);
+}
+
+.newsfeed li a:link:hover {
+  text-decoration-color: rgba(35, 45, 139, 1);
 }
 
 .button {
